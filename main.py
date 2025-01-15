@@ -5,6 +5,8 @@ def access_task():
         print("There are no tasks yet.")
     else:
         print("Current tasks:", tasks)
+
+def add_task():
     new_task = input("What Task would you like to add: ")
     tasks.append(new_task)
     print(f"Task '{new_task}' added successfully!")
@@ -20,5 +22,7 @@ while True:
     first_prompt = input("What Task Would you like to perform?")
     if first_prompt == "1":
         access_task()
+    elif first_prompt == '2':
+        add_task()
     else:
         print("ok")
