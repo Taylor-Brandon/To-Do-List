@@ -19,6 +19,7 @@ def delete_task():
     for task in tasks:
         if task == removed_task:
             tasks.remove(task)
+    print("Removed Task")
 
 def initial_prompt():
    print("1. Access Tasks")
