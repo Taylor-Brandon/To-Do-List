@@ -8,8 +8,17 @@ def access_task():
 
 def add_task():
     new_task = input("What Task would you like to add: ")
+    new_task.lower()
     tasks.append(new_task)
     print(f"Task '{new_task}' added successfully!")
+
+def delete_task():
+    print(tasks)
+    removed_task = input("What tag would you like to remove: ")
+    removed_task.lower()
+    for task in tasks:
+        if task == removed_task:
+            tasks.remove(task)
 
 def initial_prompt():
    print("1. Access Tasks")
@@ -25,4 +34,4 @@ while True:
     elif first_prompt == '2':
         add_task()
     else:
-        print("ok")
+        delete_task()
